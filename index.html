@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nature.PXL — Fine Art Nature Photography</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>
+/* ═══════════════════════════════════════════════
+   Nature.PXL — style.css
+   Shared across index.html + about.html
+   ═══════════════════════════════════════════════ */
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
 :root{
   --ink:#0a0a08;
   --deep:#111210;
@@ -22,6 +20,7 @@
   --muted2:rgba(240,236,226,0.6);
   --text:rgba(240,236,226,0.85);
 }
+
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--ink);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;cursor:none}
 
@@ -53,30 +52,21 @@ nav.scrolled{background:rgba(10,10,8,.96);backdrop-filter:blur(20px);padding:1.2
 
 /* ── HERO ── */
 .hero{height:100vh;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
-
 .hero-left{position:relative;overflow:hidden}
 .hero-left-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=90') center/cover;filter:brightness(.45) saturate(.7);transform:scale(1.08);animation:zoomSlow 20s ease-in-out infinite alternate}
 @keyframes zoomSlow{from{transform:scale(1.08)}to{transform:scale(1.15)}}
-
 .hero-right{background:var(--deep);display:flex;flex-direction:column;justify-content:center;padding:8rem 5rem 6rem 5rem;position:relative;overflow:hidden}
 .hero-right::before{content:'';position:absolute;top:0;left:0;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
-
 .hero-eyebrow{font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem}
 .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);opacity:.5}
-
 .hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,4.5vw,5rem);font-weight:300;line-height:1.1;color:var(--cream);margin-bottom:2rem}
 .hero-h1 em{font-style:italic;color:var(--gold)}
-
 .hero-desc{font-size:.82rem;line-height:2;color:var(--muted);max-width:340px;margin-bottom:3.5rem;font-weight:300}
-
 .hero-cta{display:inline-flex;align-items:center;gap:1rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(184,152,90,.3);padding-bottom:.5rem;transition:gap .3s,border-color .3s}
 .hero-cta:hover{gap:1.6rem;border-color:var(--gold)}
-
 .hero-bottom{position:absolute;bottom:3rem;left:5rem;display:flex;gap:4rem}
-.hero-stat{}
 .hero-stat-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--cream);line-height:1}
 .hero-stat-l{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
-
 .hero-scroll{position:absolute;bottom:3rem;right:4rem;display:flex;flex-direction:column;align-items:center;gap:.75rem;z-index:2}
 .hero-scroll-line{width:1px;height:80px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease-in-out infinite}
 @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
@@ -96,23 +86,18 @@ nav.scrolled{background:rgba(10,10,8,.96);backdrop-filter:blur(20px);padding:1.2
 
 /* ── FEATURED SECTION ── */
 .featured{padding:8rem 5rem;max-width:1600px;margin:0 auto}
-
 .featured-grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:16px}
-
 .f-card{position:relative;overflow:hidden;border-radius:2px;cursor:none}
 .f-card img{width:100%;display:block;transition:transform .7s cubic-bezier(.25,.46,.45,.94),filter .5s}
 .f-card:hover img{transform:scale(1.06);filter:brightness(.6) saturate(.7)}
-
 .f-card-1{grid-row:span 2}
 .f-card-1 img{height:660px;object-fit:cover}
 .f-card-2 img,.f-card-3 img{height:320px;object-fit:cover}
-
 .f-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.9) 0%,transparent 55%);opacity:0;transition:opacity .4s;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem}
 .f-card:hover .f-overlay{opacity:1}
 .f-cat{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
 .f-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;color:var(--cream)}
 .f-loc{font-size:.65rem;color:var(--muted);margin-top:.3rem}
-
 .f-card-tag{position:absolute;top:1.25rem;left:1.25rem;padding:.3rem .8rem;border:1px solid rgba(184,152,90,.5);font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(10,10,8,.6);backdrop-filter:blur(4px)}
 
 /* ── FILTER STRIP ── */
@@ -125,36 +110,41 @@ nav.scrolled{background:rgba(10,10,8,.96);backdrop-filter:blur(20px);padding:1.2
 
 /* ── GALLERY ── */
 .gallery-wrap{padding:5rem;max-width:1600px;margin:0 auto}
-.masonry{columns:3;column-gap:12px}
-@media(max-width:1100px){.masonry{columns:2}}
-@media(max-width:600px){.masonry{columns:1}}
 
-.g-card{break-inside:avoid;margin-bottom:12px;position:relative;overflow:hidden;cursor:none;border-radius:2px}
+/* Fluid masonry: 3-col desktop → 2-col tablet → 1-col mobile (portrait Android) */
+.masonry{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  align-items:start;
+}
+@media(max-width:768px){
+  .masonry{grid-template-columns:1fr}
+  /* Uniform card height on mobile for cleanliness */
+  .g-card img{height:260px !important}
+}
+@media(min-width:769px) and (max-width:1100px){
+  .masonry{grid-template-columns:repeat(2,1fr)}
+}
+
+.g-card{position:relative;overflow:hidden;cursor:none;border-radius:2px;break-inside:avoid}
 .g-card img{width:100%;display:block;transition:transform .65s cubic-bezier(.25,.46,.45,.94),filter .5s;filter:brightness(.9) saturate(.8)}
 .g-card:hover img{transform:scale(1.05);filter:brightness(.5) saturate(.65)}
-
 .g-overlay{position:absolute;inset:0;opacity:0;transition:opacity .35s;display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;background:linear-gradient(135deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.85) 100%)}
 .g-card:hover .g-overlay{opacity:1}
-
 .g-top{display:flex;justify-content:flex-end}
 .g-zoom{width:36px;height:36px;border:1px solid rgba(184,152,90,.5);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.9rem;transition:background .2s}
 .g-zoom:hover{background:var(--gold);color:var(--ink)}
-
-.g-bottom{}
 .g-cat-tag{font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
 .g-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:300;color:var(--cream);line-height:1.3}
 .g-loc{font-size:.6rem;color:var(--muted);margin-top:.25rem;display:flex;align-items:center;gap:.3rem}
 
 /* ── PHILOSOPHY ── */
 .philosophy{padding:10rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:center;max-width:1600px;margin:0 auto;border-top:1px solid var(--border)}
-
-.phil-left{}
 .phil-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.35;color:var(--cream);margin-bottom:2rem}
 .phil-quote em{color:var(--gold);font-style:italic}
 .phil-attr{font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
-
 .phil-right{display:flex;flex-direction:column;gap:3rem}
-.phil-item{}
 .phil-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:var(--border2);line-height:1}
 .phil-title{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin:.5rem 0 .75rem}
 .phil-text{font-size:.82rem;line-height:1.9;color:var(--muted);font-weight:300}
@@ -197,324 +187,111 @@ footer{border-top:1px solid var(--border);background:var(--deep)}
 .ft-col-h{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
 .ft-col a{display:block;font-size:.78rem;color:var(--muted);text-decoration:none;margin-bottom:.85rem;transition:color .2s}
 .ft-col a:hover{color:var(--cream)}
-.footer-bottom{border-top:1px solid var(--border);padding:1.5rem 5rem;max-width:1600px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom{border-top:1px solid var(--border);padding:1.5rem 5rem;max-width:1600px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:1rem}
 .fb-copy{font-size:.58rem;letter-spacing:.15em;color:rgba(240,236,226,.2);text-transform:uppercase}
+
+/* ── VISITOR COUNTER ── */
+.visitor-counter{display:flex;flex-direction:column;align-items:center;gap:.6rem;padding:1.2rem 0}
+.visitor-counter-label{font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.visitor-counter img{height:20px;opacity:.7;filter:grayscale(1) brightness(2);transition:opacity .2s}
+.visitor-counter img:hover{opacity:1}
 
 /* ── FADE IN ANIMATION ── */
 .fade-up{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
-</style>
-</head>
-<body>
+@keyframes cardIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-<div id="cur"></div>
-<div id="cur-r"></div>
+/* ════════════════════════════════════
+   ABOUT PAGE STYLES
+   ════════════════════════════════════ */
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-logo">Nature<span>.PXL</span></div>
-  <div class="loader-line"></div>
-  <div class="loader-pct" id="lpct">Loading…</div>
-</div>
+/* ── ABOUT HERO BANNER ── */
+.about-hero{height:55vh;min-height:420px;position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.about-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=85') center/cover;filter:brightness(.3) saturate(.6);transform:scale(1.06);animation:zoomSlow 20s ease-in-out infinite alternate}
+.about-hero-content{position:relative;z-index:1;padding:5rem;padding-top:12rem}
+.about-eyebrow{font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.about-eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);opacity:.5}
+.about-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:300;line-height:1.1;color:var(--cream)}
+.about-h1 em{font-style:italic;color:var(--gold)}
 
-<!-- NAV -->
-<nav id="nav">
-  <a class="nav-logo" href="#">Nature<em>.PXL</em></a>
-  <div class="nav-links">
-    <a href="#featured" class="active">Gallery</a>
-    <a href="#philosophy">Philosophy</a>
-    <a href="#about-foot">Contact</a>
-  </div>
-</nav>
+/* ── ABOUT BODY ── */
+.about-body{max-width:1200px;margin:0 auto;padding:7rem 5rem}
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-left-img"></div>
-  </div>
-  <div class="hero-right">
-    <p class="hero-eyebrow">Fine Art Nature Photography</p>
-    <h1 class="hero-h1">Where silence<br>becomes <em>art.</em></h1>
-    <p class="hero-desc">Seeking beauty in the wild. Preserving moments of stillness from the natural world.</p>
-    <a class="hero-cta" href="#featured">Explore the Gallery →</a>
-    <div class="hero-bottom">
-      <div class="hero-stat">
-        <div class="hero-stat-n">12k+</div>
-        <div class="hero-stat-l">Frames shot</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-n">6</div>
-        <div class="hero-stat-l">Ecosystems</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-n">∞</div>
-        <div class="hero-stat-l">Hours in the wild</div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="hero-scroll-txt">Scroll</div>
-    <div class="hero-scroll-line"></div>
-  </div>
-</section>
+.about-grid{display:grid;grid-template-columns:320px 1fr;gap:6rem;align-items:start;margin-bottom:7rem}
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track" id="mtrack"></div>
-</div>
+/* Profile card */
+.profile-card{position:sticky;top:8rem;display:flex;flex-direction:column;align-items:center;gap:2rem}
+.profile-photo-wrap{width:240px;height:240px;border-radius:50%;border:1px solid var(--border2);overflow:hidden;position:relative;background:var(--surface)}
+.profile-photo-inner{width:100%;height:100%;background:var(--surface);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem}
+.profile-photo-placeholder{font-size:3rem;opacity:.2}
+.profile-photo-hint{font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:center;max-width:120px;line-height:1.6}
+.profile-photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.profile-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--cream);text-align:center;letter-spacing:.05em}
+.profile-tag{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-align:center;margin-top:.25rem}
+.profile-location{display:flex;align-items:center;gap:.5rem;font-size:.7rem;color:var(--muted);margin-top:.5rem}
+.profile-location-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-<!-- FEATURED -->
-<section class="featured fade-up" id="featured">
-  <div class="s-label">
-    <div class="s-label-line"></div>
-    <div class="s-label-text">Featured Work</div>
-    <div class="s-label-line"></div>
-  </div>
-  <div class="featured-grid">
-    <div class="f-card f-card-1" onclick="openLb(0,featuredPhotos)">
-      <img src="https://lh3.googleusercontent.com/pw/AP1GczPKRA4UYE9Jevyeu0DpECaSwVUZFad4x1xALNYZQQaB6xPRL7iI5YbN8JkOMngGcNYAddRLQaMoXz6sBwDLflWIWZ_j32NJA4_piLziO6tYRtheriml=w1920-h1080" alt="Forest">
-      <div class="f-card-tag">Featured</div>
-      <div class="f-overlay">
-        <div class="f-cat">Forest</div>
-        <div class="f-title">Into the Mountain</div>
-        <div class="f-loc">📍Dantewada, Chhattisgarh </div>
-      </div>
-    </div>
-    <div class="f-card f-card-2" onclick="openLb(1,featuredPhotos)">
-      <img src="https://lh3.googleusercontent.com/pw/AP1GczNc_wEVlv5c7F_4W_O1v140hzr1XsLPNv-2IM13Ux5ijRG8kWm077l49mnPmuvyuhp1uvoq8jUtExrpjfEHcXKx6Hx3ccXKSQx50FbUq20x1b8VMe9z=w1920-h1080" alt="Mountain">
-      <div class="f-overlay">
-        <div class="f-cat">Sky</div>
-        <div class="f-title">Blooming queitly🌸</div>
-        <div class="f-loc">📍Ras, Rajasthan</div>
-      </div>
-    </div>
-    <div class="f-card f-card-3" onclick="openLb(2,featuredPhotos)">
-      <img src="https://lh3.googleusercontent.com/pw/AP1GczN2XbKHrONurqmiK8NKJh4R1f4hXW1qEJEMdTCwES8SIfbarQpGWa8mt0bUS4b_njUP8OZ1BZwGaScGcrZaZAELYCUUgBFVu5_PGlhcYQdMho7WVBIN=w1920-h1080" alt="Wildlife">
-      <div class="f-card-tag">Sky</div>
-      <div class="f-overlay">
-        <div class="f-cat">Sky</div>
-        <div class="f-title">Evening Painted Blue</div>
-        <div class="f-loc">📍 Patas, Maharashtra</div>
-      </div>
-    </div>
-  </div>
-</section>
+/* Bio content */
+.about-content{}
+.about-section{margin-bottom:4rem}
+.about-section-tag{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem}
+.about-section-tag::after{content:'';flex:1;height:1px;background:var(--border)}
+.about-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,2.5vw,2.5rem);font-weight:300;color:var(--cream);line-height:1.2;margin-bottom:1.5rem}
+.about-section h2 em{color:var(--gold);font-style:italic}
+.about-para{font-size:.88rem;line-height:2.1;color:var(--muted);font-weight:300;margin-bottom:1.2rem}
+.about-para strong{color:var(--cream);font-weight:400}
 
-<!-- FILTER STRIP -->
-<div class="filter-strip" id="fstrip">
-  <button class="f-tab on" onclick="doFilter('all',this)">All <span class="f-count" id="fc-all"></span></button>
-  <button class="f-tab" onclick="doFilter('forest',this)">Forests <span class="f-count" id="fc-forest"></span></button>
-  <button class="f-tab" onclick="doFilter('wildlife',this)">Wildlife <span class="f-count" id="fc-wildlife"></span></button>
-  <button class="f-tab" onclick="doFilter('mountain',this)">Mountains <span class="f-count" id="fc-mountain"></span></button>
-  <button class="f-tab" onclick="doFilter('water',this)">Water <span class="f-count" id="fc-water"></span></button>
-  <button class="f-tab" onclick="doFilter('sky',this)">Sky <span class="f-count" id="fc-sky"></span></button>
-  <button class="f-tab" onclick="doFilter('macro',this)">Macro <span class="f-count" id="fc-macro"></span></button>
-</div>
+/* Pillars */
+.about-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.pillar{border:1px solid var(--border);padding:2rem 1.5rem;border-radius:2px;transition:border-color .3s}
+.pillar:hover{border-color:rgba(184,152,90,.3)}
+.pillar-icon{font-size:1.5rem;margin-bottom:1rem}
+.pillar-title{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.7rem}
+.pillar-text{font-size:.78rem;line-height:1.8;color:var(--muted)}
 
-<!-- GALLERY -->
-<div class="gallery-wrap fade-up">
-  <div class="masonry" id="masonry"></div>
-</div>
+/* Contact grid */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.contact-card{border:1px solid var(--border);padding:1.75rem 2rem;border-radius:2px;text-decoration:none;display:flex;align-items:center;gap:1.25rem;transition:border-color .3s,background .3s}
+.contact-card:hover{border-color:rgba(184,152,90,.4);background:var(--gold-dim)}
+.contact-card-icon{width:38px;height:38px;border:1px solid var(--border2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--gold);flex-shrink:0}
+.contact-card-label{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.contact-card-value{font-size:.82rem;color:var(--cream)}
 
-<!-- PHILOSOPHY -->
-<section class="philosophy fade-up" id="philosophy">
-  <div class="phil-left">
-    <div class="s-label" style="margin-bottom:3rem">
-      <div class="s-label-text">Philosophy</div>
-      <div class="s-label-line"></div>
-    </div>
-    <div class="phil-quote">"To photograph nature is to <em>listen</em> to it — with patience, reverence, and silence."</div>
-    <div class="phil-attr">— Nature.PXL · Chhattisgarh, India</div>
-  </div>
-  <div class="phil-right">
-    <div class="phil-item">
-      <div class="phil-num">01</div>
-      <div class="phil-title">Patience Over Speed</div>
-      <div class="phil-text">The best frames are never rushed. Sometimes waiting three hours for the right light is what separates a photograph from a snapshot.</div>
-    </div>
-    <div class="phil-item">
-      <div class="phil-num">02</div>
-      <div class="phil-title">Light is Everything</div>
-      <div class="phil-text">Golden hour, blue hour, storm light — nature's lighting is unmatched. Every expedition begins and ends with the sun.</div>
-    </div>
-    <div class="phil-item">
-      <div class="phil-num">03</div>
-      <div class="phil-title">Leave No Trace</div>
-      <div class="phil-text">The wild places we photograph are sacred. We enter gently, observe carefully, and leave every place exactly as we found it.</div>
-    </div>
-  </div>
-</section>
+/* ════════════════════════════════════
+   RESPONSIVE — MOBILE (≤768px)
+   Default: Android portrait 1-column
+   Desktop Site mode: restores full grid
+   ════════════════════════════════════ */
+@media(max-width:768px){
+  /* Nav */
+  nav{padding:1.5rem 1.5rem}
+  nav.scrolled{padding:1rem 1.5rem}
+  .nav-links{gap:1.5rem}
+  .nav-links a{font-size:.55rem;letter-spacing:.15em}
 
-<!-- FULL WIDTH -->
-<div class="fullwidth">
-  <img class="fullwidth-img" src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1800&q=85" alt="Milky Way">
-  <div class="fullwidth-text">
-    <div class="fw-eyebrow">BEYOND THE HORIZON </div>
-    <div class="fw-title"> Thank you for<br><em>The company</em></div>
-    <div class="fw-sub">WHERE NATURE SPEAKS, WE LISTEN</div>
-  </div>
-</div>
+  /* Hero */
+  .hero{grid-template-columns:1fr;grid-template-rows:45vh auto}
+  .hero-right{padding:3rem 1.5rem 5rem 1.5rem}
+  .hero-bottom{bottom:1.5rem;left:1.5rem;gap:2rem}
+  .hero-scroll{display:none}
 
-<!-- FOOTER -->
-<footer id="about-foot">
-  <div class="footer-top">
-    <div>
-      <div class="ft-logo">Nature<em>.PXL</em></div>
-      <div class="ft-desc">Fine art nature photography from the heart of India. Capturing forests,flowers, skies, wildlife and wild rivers — one frame at a time.</div>
-      <div class="ft-social">
-         <a class="ft-soc-btn" href="mailto:nature.pxl@email.com" title="Email">@</a>
-        <a class="ft-soc-btn" href="https://www.instagram.com/nature.pxl/" title="Instagram">In</a>
-        <a class="ft-soc-btn" href="https://youtube.com/@gajendra.maravi?si=1eXlm5RosgEplyQp" title="">YT</a>
-        <a class="ft-soc-btn" href="https://open.spotify.com/user/31vlkd4ayvkphewb5orqbztltnje?si=z1sWcyShRdmudfGmL8hKCQ" title="">♫</a> </div>
-    </div>
-    <div class="ft-col">
-      <div class="ft-col-h">Explore</div>
-      <a href="#featured">Featured</a>
-      <a href="#masonry">Gallery</a>
-      <a href="#philosophy">Philosophy</a>
-    </div>
-    <div class="ft-col">
-      <div class="ft-col-h">Connect</div>
-      <a href="mailto:gajendramaravi2@email.com">Email Me</a>
-      <a href="https://www.instagram.com/itsgkm/">Instagram</a>
-      <a href="https://www.facebook.com/imaravigajendra">Facebook</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="fb-copy">© 2025 Nature.PXL — All rights reserved</div>
-    <div class="fb-copy">Chhattisgarh, India</div>
-  </div>
-</footer>
+  /* Sections */
+  .featured{padding:4rem 1.5rem}
+  .featured-grid{grid-template-columns:1fr;grid-template-rows:auto}
+  .f-card-1{grid-row:span 1}
+  .f-card-1 img,.f-card-2 img,.f-card-3 img{height:240px}
+  .gallery-wrap{padding:2rem 1rem}
+  .filter-strip{padding:0 1rem}
+  .f-tab{padding:1rem 1rem}
+  .philosophy{padding:5rem 1.5rem;grid-template-columns:1fr;gap:3rem}
+  .footer-top{padding:4rem 1.5rem;grid-template-columns:1fr;gap:3rem}
+  .footer-bottom{padding:1.5rem}
 
-<!-- LIGHTBOX -->
-<div id="lb">
-  <div id="lb-counter"></div>
-  <button id="lb-close" onclick="closeLb()">✕ Close</button>
-  <button class="lb-arrow" id="lb-prev" onclick="lbNav(-1)">←</button>
-  <img id="lb-img" src="" alt="">
-  <button class="lb-arrow" id="lb-next" onclick="lbNav(1)">→</button>
-  <div id="lb-meta">
-    <div id="lb-title"></div>
-    <div id="lb-sub"></div>
-  </div>
-</div>
-
-<script>
-// ── CURSOR ──
-const cur=document.getElementById('cur'),ring=document.getElementById('cur-r');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
-(function anim(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(anim)})();
-
-// ── LOADER ──
-let pct=0;
-const lp=document.getElementById('lpct');
-const lt=setInterval(()=>{
-  pct+=Math.random()*18;
-  if(pct>=100){pct=100;clearInterval(lt);setTimeout(()=>document.getElementById('loader').classList.add('done'),400)}
-  lp.textContent=Math.floor(pct)+'%';
-},120);
-
-// ── NAV SCROLL ──
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',scrollY>60);
-});
-
-// ── MARQUEE ──
-const mItems=['Forest','Flowers','Sky','Wildlife','Mountains','Macro','Leaf','Water','Chhattisgarh','India','Nature','Golden Hour'];
-const mHTML=mItems.map(i=>`<span class="marquee-item">${i}<span class="marquee-dot">◆</span></span>`).join('');
-document.getElementById('mtrack').innerHTML=mHTML+mHTML;
-
-// ── PHOTOS DATA ──
-const photos=[
-  {id: 2,title: 'Mogra in My Garden', cat: 'macro',loc: 'Chirmiri, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczPFa2fSAbqDwBxlYwPFEKUsbo-0diRza8hWjm6zSqR1RPSJUGDKYUT5c3P-pXxeTolJRF9healulg9BkVgnOyo7QtTq2Zi3T9CVm2DaXRLJAqoWpIzD=w1920-h1080',
- h: 320},
-  {id:2,title:'Golden Eagle Soar',cat:'wildlife',loc:'Jim Corbett, India',img:'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=85',h:320},
-  {id:3,title:'Alpine Mirror Lake',cat:'mountain',loc:'Himachal Pradesh',img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85',h:390},
-  {id:4,title:'River After Rain',cat:'water',loc:'Bastar, Chhattisgarh',img:'https://images.unsplash.com/photo-1439405326854-014607f694d7?w=800&q=85',h:300},
-  {id:5,title:'Monsoon Cloud Tower',cat:'sky',loc:'Rajasthan, India',img:'https://images.unsplash.com/photo-1504608524841-42f4cf6b86e0?w=800&q=85',h:420},
-  {id:6,title:'Dew on Spider Web',cat:'macro',loc:'Chhattisgarh, India',img:'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=85',h:280},
-  {id:7,title:'Fox in Winter Frost',cat:'wildlife',loc:'Hokkaido, Japan',img:'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=85',h:360},
-  {id:8,title:'Milky Way · Ladakh',cat:'sky',loc:'Ladakh, India',img:'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=85',h:440},
-  {id:9,title:'Autumn Birch Forest',cat:'forest',loc:'Himachal Pradesh',img:'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=85',h:380},
-  {id:10,title:'Waterfall · Iceland',cat:'water',loc:'Iceland',img:'https://images.unsplash.com/photo-1497449493050-aad1e7cad165?w=800&q=85',h:460},
-  {id:11,title:'Himalayan Sunrise',cat:'mountain',loc:'Manali, India',img:'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=85',h:330},
-  {id:12,title:'Bee on Wildflower',cat:'macro',loc:'Chhattisgarh, India',img:'https://images.unsplash.com/photo-1444953360505-2b8ca4915b30?w=800&q=85',h:290},
-  {id:13,title:'Misty Pine Ridge',cat:'forest',loc:'Ooty, Tamil Nadu',img:'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=70',h:410},
-  {id:14,title:'Desert Dunes',cat:'mountain',loc:'Jaisalmer, India',img:'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=85',h:350},
-  {id:15,title:'Storm Over Valley',cat:'sky',loc:'Spiti Valley, India',img:'https://images.unsplash.com/photo-1504608524841-42f4cf6b86e0?w=600&q=70',h:310},
-];
-
-const featuredPhotos=[
-  {title:'Into The Mountain',loc:'Dantewada, Chhattisgarh',cat:'Wildlife',img:'https://lh3.googleusercontent.com/pw/AP1GczPKRA4UYE9Jevyeu0DpECaSwVUZFad4x1xALNYZQQaB6xPRL7iI5YbN8JkOMngGcNYAddRLQaMoXz6sBwDLflWIWZ_j32NJA4_piLziO6tYRtheriml=w1920-h1080'},
-  {title:'Blooming quietly',loc:'Ras, Rajasthan',cat:'Flowers',img:'https://lh3.googleusercontent.com/pw/AP1GczNc_wEVlv5c7F_4W_O1v140hzr1XsLPNv-2IM13Ux5ijRG8kWm077l49mnPmuvyuhp1uvoq8jUtExrpjfEHcXKx6Hx3ccXKSQx50FbUq20x1b8VMe9z=w1920-h1080'},
-  {title:'Evening painted blue',loc:'Patas, Maharashtra',cat:'Sky',img:'https://lh3.googleusercontent.com/pw/AP1GczN2XbKHrONurqmiK8NKJh4R1f4hXW1qEJEMdTCwES8SIfbarQpGWa8mt0bUS4b_njUP8OZ1BZwGaScGcrZaZAELYCUUgBFVu5_PGlhcYQdMho7WVBIN=w1920-h1080'},
-
-];
-
-// counts
-const cats=['forest','wildlife','mountain','water','sky','macro'];
-document.getElementById('fc-all').textContent=photos.length;
-cats.forEach(c=>{const el=document.getElementById('fc-'+c);if(el)el.textContent=photos.filter(p=>p.cat===c).length});
-
-// ── RENDER ──
-let visiblePhotos=[];
-function render(list){
-  visiblePhotos=list;
-  const g=document.getElementById('masonry');
-  g.innerHTML=list.map((p,i)=>`
-    <div class="g-card" onclick="openLb(${i},visiblePhotos)" style="animation:cardIn .5s ${i*0.04}s ease both">
-      <img src="${p.img}" alt="${p.title}" style="height:${p.h}px;object-fit:cover" loading="lazy">
-      <div class="g-overlay">
-        <div class="g-top"><div class="g-zoom">⤢</div></div>
-        <div class="g-bottom">
-          <div class="g-cat-tag">${p.cat}</div>
-          <div class="g-title">${p.title}</div>
-          <div class="g-loc">📍 ${p.loc}</div>
-        </div>
-      </div>
-    </div>
-  `).join('');
+  /* About page */
+  .about-hero-content{padding:3rem 1.5rem;padding-top:10rem}
+  .about-body{padding:4rem 1.5rem}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .profile-card{position:static}
+  .about-pillars{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
 }
-const style=document.createElement('style');
-style.textContent='@keyframes cardIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}';
-document.head.appendChild(style);
-
-function doFilter(cat,btn){
-  document.querySelectorAll('.f-tab').forEach(b=>b.classList.remove('on'));
-  btn.classList.add('on');
-  render(cat==='all'?photos:photos.filter(p=>p.cat===cat));
-}
-
-// ── LIGHTBOX ──
-let lbPool=[],lbIdx=0;
-function openLb(idx,pool){
-  lbPool=pool;lbIdx=idx;showLb();
-  document.getElementById('lb').classList.add('on');
-  document.body.style.overflow='hidden';
-}
-function showLb(){
-  const p=lbPool[lbIdx];
-  document.getElementById('lb-img').src=p.img;
-  document.getElementById('lb-title').innerHTML=`<div id="lb-title" style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;color:var(--cream);margin-bottom:.3rem">${p.title}</div>`;
-  document.getElementById('lb-sub').innerHTML=`<div style="font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)">${p.cat||''} · ${p.loc}</div>`;
-  document.getElementById('lb-counter').textContent=`${lbIdx+1} / ${lbPool.length}`;
-}
-function closeLb(){document.getElementById('lb').classList.remove('on');document.body.style.overflow=''}
-function lbNav(d){lbIdx=(lbIdx+d+lbPool.length)%lbPool.length;showLb()}
-document.getElementById('lb').addEventListener('click',e=>{if(e.target.id==='lb')closeLb()});
-document.addEventListener('keydown',e=>{
-  if(!document.getElementById('lb').classList.contains('on'))return;
-  if(e.key==='Escape')closeLb();
-  if(e.key==='ArrowRight')lbNav(1);
-  if(e.key==='ArrowLeft')lbNav(-1);
-});
-
-// ── SCROLL FADE ──
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
-
-render(photos);
-</script>
-</body>
-</html>
