@@ -202,7 +202,18 @@ footer{border-top:1px solid var(--border);background:var(--deep)}
 
 /* ── FADE IN ANIMATION ── */
 .fade-up{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up.visible{opacity:1;transform:translateY(0)
+@media (max-width: 768px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .hero { grid-template-columns: 1fr; height: auto; }
+  .hero-right { padding: 5rem 1.5rem 3rem 1.5rem; }
+  .hero-h1 { font-size: 2.8rem; }
+  .hero-bottom { position: relative; margin-top: 2rem; display: flex; flex-wrap: wrap; }
+  .hero-scroll { display: none; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .masonry { columns: 1; }
+  .philosophy { grid-template-columns: 1fr; padding: 3rem 1.5rem; }
+  .footer-top { grid-template-columns: 1fr; }}
 </style>
 </head>
 <body>
