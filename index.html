@@ -235,7 +235,7 @@ footer{border-top:1px solid var(--border);background:var(--deep)}
   <div class="hero-right">
     <p class="hero-eyebrow">Fine Art Nature Photography</p>
     <h1 class="hero-h1">Where silence<br>becomes <em>art.</em></h1>
-    <p class="hero-desc">Capturing the beauty around us — from the soft colors of flowers and leaves to the deep blue of the sky and the flow of the river. Every frame is a peaceful moment, a living memory saved in light.</p>
+    <p class="hero-desc">Documenting the untamed world — from the misty forests of Chhattisgarh to the peaks of the Himalayas. Every frame is a moment of stillness captured forever.</p>
     <a class="hero-cta" href="#featured">Explore the Gallery →</a>
     <div class="hero-bottom">
       <div class="hero-stat">
@@ -272,12 +272,12 @@ footer{border-top:1px solid var(--border);background:var(--deep)}
   </div>
   <div class="featured-grid">
     <div class="f-card f-card-1" onclick="openLb(0,featuredPhotos)">
-      <img src="https://lh3.googleusercontent.com/pw/AP1GczMxjTl-Gls_6bqYKvPiEbfj52ivouuWnAJlf_vBWY_p27UwZH6FnVqXpZ1xKyb1iuqwEX7AZML6LRpeYe1FmWd9hVm5J7EhVofpK0xXmtvTJEkow8w-=w1920-h1080" alt="Forest">
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&q=90" alt="Forest">
       <div class="f-card-tag">Featured</div>
       <div class="f-overlay">
         <div class="f-cat">Forest</div>
-        <div class="f-title">Into The Mountain</div>
-        <div class="f-loc">📍 Dantewada, Chhattisgarh</div>
+        <div class="f-title">Ancient Redwood Dawn</div>
+        <div class="f-loc">📍 Western Ghats, India</div>
       </div>
     </div>
     <div class="f-card f-card-2" onclick="openLb(1,featuredPhotos)">
@@ -421,13 +421,13 @@ window.addEventListener('scroll',()=>{
 });
 
 // ── MARQUEE ──
-const mItems=['Forest','Flowers','Sky','Wildlife','Mountains','Macro','Leaf','Water','Chhattisgarh','India','Nature','Golden Hour'];
+const mItems=['Forest','Wildlife','Mountains','Macro','Sky','Water','Chhattisgarh','India','Nature','Himalayas','Western Ghats','Golden Hour'];
 const mHTML=mItems.map(i=>`<span class="marquee-item">${i}<span class="marquee-dot">◆</span></span>`).join('');
 document.getElementById('mtrack').innerHTML=mHTML+mHTML;
 
 // ── PHOTOS DATA ──
 const photos=[
-  {id: 2,title: 'Sky with Freedom', cat: 'macro',loc: 'Korba, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczPFa2fSAbqDwBxlYwPFEKUsbo-0diRza8hWjm6zSqR1RPSJUGDKYUT5c3P-pXxeTolJRF9healulg9BkVgnOyo7QtTq2Zi3T9CVm2DaXRLJAqoWpIzD=w1920-h1080',
+  {id: 2,title: 'Mogra in My Garden', cat: 'macro',loc: 'Chirmiri, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczPFa2fSAbqDwBxlYwPFEKUsbo-0diRza8hWjm6zSqR1RPSJUGDKYUT5c3P-pXxeTolJRF9healulg9BkVgnOyo7QtTq2Zi3T9CVm2DaXRLJAqoWpIzD=w1920-h1080',
  h: 320},
   {id:2,title:'Golden Eagle Soar',cat:'wildlife',loc:'Jim Corbett, India',img:'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=85',h:320},
   {id:3,title:'Alpine Mirror Lake',cat:'mountain',loc:'Himachal Pradesh',img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85',h:390},
@@ -446,9 +446,9 @@ const photos=[
 ];
 
 const featuredPhotos=[
-  {title:'Little Explorer🐱🌿',loc:'Ras, Rajasthan',cat:'Wildlife',img:'https://lh3.googleusercontent.com/pw/AP1GczN3RNzXPYb9qKl79sr7Wx9L4n8ZjcAx-stsyZ7HF61NGb9Aeu1thfIbZD5GvEiXPYZgCsNK5Gs98AJl6JnXWifNM-SvJn2pntxPd69-RJ2xBZsesYa6=w1920-h1080'},
-  {title:'Blooming quietly',loc:'Ras, Rajasthan',cat:'Flowers',img:'https://lh3.googleusercontent.com/pw/AP1GczNc_wEVlv5c7F_4W_O1v140hzr1XsLPNv-2IM13Ux5ijRG8kWm077l49mnPmuvyuhp1uvoq8jUtExrpjfEHcXKx6Hx3ccXKSQx50FbUq20x1b8VMe9z=w1920-h1080'},
-  {title:'Evening painted blue',loc:'JPatas, Maharashtra',cat:'Sky',img:'https://lh3.googleusercontent.com/pw/AP1GczN2XbKHrONurqmiK8NKJh4R1f4hXW1qEJEMdTCwES8SIfbarQpGWa8mt0bUS4b_njUP8OZ1BZwGaScGcrZaZAELYCUUgBFVu5_PGlhcYQdMho7WVBIN=w1920-h1080'},
+  {title:'Ancient Redwood Dawn',loc:'Western Ghats, India',cat:'Forest',img:'https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=90'},
+  {title:'Alpine Mirror Lake',loc:'Himachal Pradesh',cat:'Mountain',img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=90'},
+  {title:'Golden Hour Gaze',loc:'Jim Corbett, India',cat:'Wildlife',img:'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=1200&q=90'},
 ];
 
 // counts
