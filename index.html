@@ -761,12 +761,13 @@ footer{border-top:1px solid var(--border);background:var(--deep)}
 <!-- FILTER STRIP -->
 <div class="filter-strip" id="fstrip">
   <button class="f-tab on" onclick="doFilter('all',this)">All <span class="f-count" id="fc-all"></span></button>
-  <button class="f-tab" onclick="doFilter('forest',this)">Forests <span class="f-count" id="fc-forest"></span></button>
-  <button class="f-tab" onclick="doFilter('wildlife',this)">Wildlife <span class="f-count" id="fc-wildlife"></span></button>
-  <button class="f-tab" onclick="doFilter('mountain',this)">Mountains <span class="f-count" id="fc-mountain"></span></button>
-  <button class="f-tab" onclick="doFilter('water',this)">Water <span class="f-count" id="fc-water"></span></button>
-  <button class="f-tab" onclick="doFilter('sky',this)">Sky <span class="f-count" id="fc-sky"></span></button>
-  <button class="f-tab" onclick="doFilter('macro',this)">Macro <span class="f-count" id="fc-macro"></span></button>
+  <button class="f-tab" onclick="doFilter('Flowers',this)">Flowers <span class="f-count" id="fc-Flowers"></span></button>
+  <button class="f-tab" onclick="doFilter('Sky',this)">Sky <span class="f-count" id="fc-Sky"></span></button>
+  <button class="f-tab" onclick="doFilter('Nature',this)">Nature <span class="f-count" id="fc-Nature"></span></button>
+  <button class="f-tab" onclick="doFilter('Fields',this)">Fields <span class="f-count" id="fc-Fields"></span></button>
+  <button class="f-tab" onclick="doFilter('Forest',this)">Forest <span class="f-count" id="fc-Forest"></span></button>
+  <button class="f-tab" onclick="doFilter('Wildlife',this)">Wildlife <span class="f-count" id="fc-Wildlife"></span></button>
+  <button class="f-tab" onclick="doFilter('Waterfall',this)">Waterfall <span class="f-count" id="fc-Waterfall"></span></button>
 </div>
 
 <!-- GALLERY -->
@@ -865,7 +866,7 @@ footer{border-top:1px solid var(--border);background:var(--deep)}
     </div>
     <div class="about-ctas">
       <a class="about-cta-primary" href="mailto:gajendramaravi2@email.com">Get in touch →</a>
-      <a class="about-cta-secondary" href="https://www.instagram.com/nature.pxl/" target="_blank">Instagram ↗</a>
+      <a class="about-cta-secondary" href="https://www.instagram.com/itsgkm/" target="_blank">Instagram ↗</a>
     </div>
     <div class="about-signature">
       <div class="about-sig-line"></div>
@@ -977,7 +978,7 @@ window.addEventListener('scroll',()=>{
 });
 
 // ── MARQUEE ──
-const mItems=['Forest','Flowers','Sky','Wildlife','Mountains','Macro','Leaf','Water','Fields','Chhattisgarh','India','Nature','Golden Hour'];
+const mItems=['Forest','Flowers','Sky','Landscape', 'Wildlife','Mountains','Macro','Nature','Fields','Waterfall'];
 const mHTML=mItems.map(i=>`<span class="marquee-item">${i}<span class="marquee-dot">◆</span></span>`).join('');
 document.getElementById('mtrack').innerHTML=mHTML+mHTML;
 
@@ -989,22 +990,22 @@ const photos=[
   {id:4,title:'Pure White Petals',cat:'Flowers',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczM4X615EuE4cnls2oI5AjhdbiK6f7eA9bJ-UPn3P6SKspT_RNbLHAcZxIHHXJ7vh196J_SZDmBL64sOcBvl_yh7BIPLsburxvk1GZwEB4nTION7H2AE=w1920-h1080',h:390},
   {id:5,title:'Little Happiness',cat:'Flowers',loc:'Mahasmund, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczPHs1U3tcxmBDM9Mf5sNe51kCs2uBJ8vIKEQ4mNk_9GbPU_Guk7bNEAkKg4nDSlsL8cKyo9ZOUpTjDNCNzHQnNOzkq7l7pFLonfqwVUmtEryEpGHfN0=w1920-h1080',h:280},
   {id:6,title:'Where Silence Flows',cat:'Nature',loc:'Bastar, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczO84PxYTBejYGrM1n6AGaZWcAQstVYzcjWi78qStMB97r67UdP-RImFGwkh2BlZQXhWJ7ojCVkRZGt2pjN7vFYibmCxtQT0rrlSOpKsvYDa8O3UmXsx=w1920-h1080',h:410},
-  {id:7,title:'Soft Blomms',cat:'Flowers',loc:'Bilaspur, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczN-jBzGofRVZaQd0P0Y3ytySQHfvphhC9lPs4MheaXrwNtws4Oyo0TgrqE4if_CxOq8sqenJhKVKCpy2URhafp5KQNosGYYapwCwu_dhRLAtsHRIW4G=w1920-h1080',h:350},
+  {id:7,title:'Soft Blooms',cat:'Flowers',loc:'Bilaspur, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczN-jBzGofRVZaQd0P0Y3ytySQHfvphhC9lPs4MheaXrwNtws4Oyo0TgrqE4if_CxOq8sqenJhKVKCpy2URhafp5KQNosGYYapwCwu_dhRLAtsHRIW4G=w1920-h1080',h:350},
   {id:8,title:'Freedom in Sky', cat: 'Sky',loc: 'Korba, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczPFa2fSAbqDwBxlYwPFEKUsbo-0diRza8hWjm6zSqR1RPSJUGDKYUT5c3P-pXxeTolJRF9healulg9BkVgnOyo7QtTq2Zi3T9CVm2DaXRLJAqoWpIzD=w1920-h1080',
  h:410},
-  {id:9,title:'Pink Hour',cat:'sky',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczP-JlGrWybOKy1eAu_47yTfCugY5RBnyHBzr_8pmHNSRxHVf1R9JDawdXLdDPmiAWRhULcXm7YJdJwznNjlNOy_mvehHJyb4K3qyQl5XHtPkX2rXa_u=w1920-h1080',h:280},
+  {id:9,title:'Pink Hour',cat:'Sky',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczP-JlGrWybOKy1eAu_47yTfCugY5RBnyHBzr_8pmHNSRxHVf1R9JDawdXLdDPmiAWRhULcXm7YJdJwznNjlNOy_mvehHJyb4K3qyQl5XHtPkX2rXa_u=w1920-h1080',h:280},
   {id:10,title:'Golden Whispers',cat:'Flowers',loc:'Mahasmund, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczM0xe8hk9KGnpSqohWgLv9qX_sdiXpyJYLqB0GduyIsx1_1h9uYqMiw0JFLd2w8hYjLRgjCMHHfqGdlm2yKRVkdxgCuqqzwSc51Rfq1w3_sjsNwV4Bn=w1920-h1080',h:360},
-  {id:11,title: 'Lost In Nature', cat: 'forest',loc: 'Dantewada, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczNhhg59j9P9FU9K52IwwhwIw6MO4EAXtC0Q9RZD75x7ZyxASNp5aOulxeMf6GCS5RoC_QWHbVHWovRl6mombH4Eb7UKQC8poSEuBIAkQGGmnGYD-WOW=w1920-h1080',
+  {id:11,title: 'Lost In Nature', cat: 'Forest',loc: 'Dantewada, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczNhhg59j9P9FU9K52IwwhwIw6MO4EAXtC0Q9RZD75x7ZyxASNp5aOulxeMf6GCS5RoC_QWHbVHWovRl6mombH4Eb7UKQC8poSEuBIAkQGGmnGYD-WOW=w1920-h1080',
  h:440},
   {id:12,title:'Peace just above you',cat:'Nature',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczPnnNcGTnyP9R-6otcjGkNT4Q3VBj_xGzeo8kHKjQPcSG-0FMhlvk0Kdg18YgbUSzXho2MSawpDW-IYYKvbQkweiCHM-YmyDT0gDvZ3zEHBEv0eKsMy=w1920-h1080',h:380},
   {id:13,title:'Little Explorer',cat:'Wilflife',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczPz2zk2SVXsdR6FACQ3vAV9nP2EqsHBYWpwu0CXqlJVr4vbPedvCrzBriV-74p5IAINhVGaQX1R_pH8Aatp1miH8VE4ocPpc2Jv_Gye_MgGTkU_ZiiH=w1920-h1080',h:290},  
   {id:14,title:'Tirathgarh Waterfall',cat:'Waterfall',loc:'Bastar, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczPkRWuK9EzdwhfEaGQAupPSp-QVH_bRj7nTBF3eF7y03CjeVQDWTtQMvOvAt9_unSDZta5apcVmbRAEw7uI8rj5oIGnQoGPZ9zuhXCuLLVXujuP3kC1=w1920-h1080',h:280},
-  {id:15,title:'Chasing Sunset',cat:'sky',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczNukgTvbZgTLA5KS6t1j1b0z_rGK26zxUMp465F_pPnCP2Ceu8bunfSMytsAhr_nj0w73_y7UlDSADQn0SvRjBy9RR3lJ7jgnp1NSAagBmDyH5w5N76=w1920-h1080',h:410},
-  {id:16,title:'Calm Evening',cat:'sky',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczNN71vX2xP7kgcxF4QKkENffN3HGRLW9mReOjkwnE48EzdgyBvasROPC5ds635-lwRSOToL3yXF_fhrf71D48auDJHPwBMBm5jfELFa2I-ad4PAqjkj=w1920-h1080',h:350},
-  {id:17,title:'Petel and Peace',cat:'Flowers',loc:'Bilaspur, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczMjYoSW2cQSe1gdGIM81xzD_0fXoNfOWw5pl8m57D8JiKBoZEsLL2iakYnQQ2tsrNZngoZl1eTqcTAgyuz2_QCz7RK8U4Zx85M8dx2L1x4a29bFsFcs=w1920-h1080',h:380},
+  {id:15,title:'Chasing Sunset',cat:'Sky',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczNukgTvbZgTLA5KS6t1j1b0z_rGK26zxUMp465F_pPnCP2Ceu8bunfSMytsAhr_nj0w73_y7UlDSADQn0SvRjBy9RR3lJ7jgnp1NSAagBmDyH5w5N76=w1920-h1080',h:410},
+  {id:16,title:'Calm Evening',cat:'Sky',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczNN71vX2xP7kgcxF4QKkENffN3HGRLW9mReOjkwnE48EzdgyBvasROPC5ds635-lwRSOToL3yXF_fhrf71D48auDJHPwBMBm5jfELFa2I-ad4PAqjkj=w1920-h1080',h:350},
+  {id:17,title:'Petals and Peace',cat:'Flowers',loc:'Bilaspur, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczMjYoSW2cQSe1gdGIM81xzD_0fXoNfOWw5pl8m57D8JiKBoZEsLL2iakYnQQ2tsrNZngoZl1eTqcTAgyuz2_QCz7RK8U4Zx85M8dx2L1x4a29bFsFcs=w1920-h1080',h:380},
   {id:18,title:'Evening with moon',cat:'Sky',loc:'Pali, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczP2KR6uOyKWl51SFNDYNBRsy70IkCyrWI4f6Vdqy9TxJkA02w4Vi6915SN0qijjdQhFxQurudKdWuf_X0yP4tjLs_Gp45H3oueLglPTzzIe3j5REjFO=w1920-h1080',h:300},
-  {id:19,title:'Golden roots of life',cat:'sky',loc:'Pali, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczMvGTm07gntsTsvjenbvSj6XJOLmjSMGgbrt9slJLUT_KCPaO51nADsmtfyrkBa6uTyiY6tacWKYAkRw0F1bXVIlflQlnG0s2h8aGsUxKp5ydvbfmVk=w1920-h1080',h:410},
-  {id:20,title:'Golden rays peeking through leaves',cat:'sky',loc:'Patas, Maharashtra',img:'https://lh3.googleusercontent.com/pw/AP1GczPx5I2Joylyxy88UWBMJO6oMKTo_7ffFBnpujQx1leFqhhVb3pYf1c2iZZau7ZaJWj3ZrAKFsNXZAFmHzBq7QgdNmuzzOVsrpuTH50L1nn9mozighcX=w1920-h1080',h:300},
+  {id:19,title:'Golden roots of life',cat:'Fields',loc:'Pali, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczMvGTm07gntsTsvjenbvSj6XJOLmjSMGgbrt9slJLUT_KCPaO51nADsmtfyrkBa6uTyiY6tacWKYAkRw0F1bXVIlflQlnG0s2h8aGsUxKp5ydvbfmVk=w1920-h1080',h:410},
+  {id:20,title:'Golden rays peeking through leaves',cat:'Sky',loc:'Patas, Maharashtra',img:'https://lh3.googleusercontent.com/pw/AP1GczPx5I2Joylyxy88UWBMJO6oMKTo_7ffFBnpujQx1leFqhhVb3pYf1c2iZZau7ZaJWj3ZrAKFsNXZAFmHzBq7QgdNmuzzOVsrpuTH50L1nn9mozighcX=w1920-h1080',h:300},
   {id:21,title:'Pink Petals',cat:'Flowers',loc:'Ras, Rajasthan',img:'https://lh3.googleusercontent.com/pw/AP1GczMDsaMQYJNZzgb2ShNDN614gEVFI56ML6LzytRxHuczi6BpHCAWLM4pmphlg6IWcJOeslG2LPH_x-WYi5HcNh7V8tAwrH6v4YMQPdCgSAxlm0irB6ic=w1920-h1080',h:300},
 ];
 
