@@ -977,23 +977,24 @@ window.addEventListener('scroll',()=>{
 });
 
 // ── MARQUEE ──
-const mItems=['Forest','Flowers','Sky','Wildlife','Mountains','Macro','Leaf','Water','Chhattisgarh','India','Nature','Golden Hour'];
+const mItems=['Forest','Flowers','Sky','Wildlife','Mountains','Macro','Leaf','Water','Fields','Chhattisgarh','India','Nature','Golden Hour'];
 const mHTML=mItems.map(i=>`<span class="marquee-item">${i}<span class="marquee-dot">◆</span></span>`).join('');
 document.getElementById('mtrack').innerHTML=mHTML+mHTML;
 
 // ── PHOTOS DATA ──
 const photos=[
-  {id: 2,title: 'Mogra in My Garden', cat: 'macro',loc: 'Chirmiri, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczPFa2fSAbqDwBxlYwPFEKUsbo-0diRza8hWjm6zSqR1RPSJUGDKYUT5c3P-pXxeTolJRF9healulg9BkVgnOyo7QtTq2Zi3T9CVm2DaXRLJAqoWpIzD=w1920-h1080',
+  {id: 1,title: 'Lost In Nature', cat: 'forest',loc: 'Dantewada, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczNhhg59j9P9FU9K52IwwhwIw6MO4EAXtC0Q9RZD75x7ZyxASNp5aOulxeMf6GCS5RoC_QWHbVHWovRl6mombH4Eb7UKQC8poSEuBIAkQGGmnGYD-WOW=w1920-h1080',
  h: 320},
-  {id:2,title:'Golden Eagle Soar',cat:'wildlife',loc:'Jim Corbett, India',img:'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=85',h:320},
+  {id:2,title:'Fields of Peace',cat:'Fields',loc:'Pali, Chhattisgarh',img:'https://lh3.googleusercontent.com/pw/AP1GczO6-LMU28cR54dTLPa2QXqdY3rd5F9RI9t_jY8mgoqlnfksXw-rsJP_hBraNx3DnMZMvcJGLdFVALv4doc5XhthvUUy3WZQ4o9GoUoVwOBGrVH7D0bq=w1920-h1080',h:320},
   {id:3,title:'Alpine Mirror Lake',cat:'mountain',loc:'Himachal Pradesh',img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85',h:390},
   {id:4,title:'River After Rain',cat:'water',loc:'Bastar, Chhattisgarh',img:'https://images.unsplash.com/photo-1439405326854-014607f694d7?w=800&q=85',h:300},
   {id:5,title:'Monsoon Cloud Tower',cat:'sky',loc:'Rajasthan, India',img:'https://images.unsplash.com/photo-1504608524841-42f4cf6b86e0?w=800&q=85',h:420},
   {id:6,title:'Dew on Spider Web',cat:'macro',loc:'Chhattisgarh, India',img:'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&q=85',h:280},
-  {id:7,title:'Fox in Winter Frost',cat:'wildlife',loc:'Hokkaido, Japan',img:'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=85',h:360},
-  {id:8,title:'Milky Way · Ladakh',cat:'sky',loc:'Ladakh, India',img:'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=85',h:440},
-  {id:9,title:'Autumn Birch Forest',cat:'forest',loc:'Himachal Pradesh',img:'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=85',h:380},
-  {id:10,title:'Waterfall · Iceland',cat:'water',loc:'Iceland',img:'https://images.unsplash.com/photo-1497449493050-aad1e7cad165?w=800&q=85',h:460},
+  {id: 7,title: 'Freedom in Sky', cat: 'Sky',loc: 'Korba, Chhattisgarh', img: 'https://lh3.googleusercontent.com/pw/AP1GczPFa2fSAbqDwBxlYwPFEKUsbo-0diRza8hWjm6zSqR1RPSJUGDKYUT5c3P-pXxeTolJRF9healulg9BkVgnOyo7QtTq2Zi3T9CVm2DaXRLJAqoWpIzD=w1920-h1080',
+ h: 320},
+  {id:8,title:'Fox in Winter Frost',cat:'wildlife',loc:'Hokkaido, Japan',img:'https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=85',h:360},
+  {id:9,title:'Milky Way · Ladakh',cat:'sky',loc:'Ladakh, India',img:'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=85',h:440},
+  {id:10,title:'Autumn Birch Forest',cat:'forest',loc:'Himachal Pradesh',img:'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&q=85',h:380},
   {id:11,title:'Himalayan Sunrise',cat:'mountain',loc:'Manali, India',img:'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=85',h:330},
   {id:12,title:'Bee on Wildflower',cat:'macro',loc:'Chhattisgarh, India',img:'https://images.unsplash.com/photo-1444953360505-2b8ca4915b30?w=800&q=85',h:290},
   {id:13,title:'Misty Pine Ridge',cat:'forest',loc:'Ooty, Tamil Nadu',img:'https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&q=70',h:410},
